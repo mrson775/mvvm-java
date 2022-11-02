@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModelCallback"
+            type="com.dallmeier.evidencer.ui.user.SignInViewModel" />
+
+        <variable
+            name="activityCallback"
+            type="com.dallmeier.evidencer.ui.user.SignInActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:scrollbars="none"
+        android:padding="@dimen/dimen_10">
+
+        <LinearLayout
+            android:id="@+id/login_form_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_layout_blue_radius_10"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_20">
+
+            <TextView
+                android:id="@+id/sign_in_to_your_account_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:text="@string/sign_in_to_your_account"
+                android:textSize="@dimen/sp_20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue_Border" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:text="@string/base_url"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/base_url_edt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textUri"
+                    android:singleLine="true"
+                    android:text="test2.dallmeier.vn"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+
+                <requestFocus />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:text="@string/username_login"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username_login_edt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/user_name_or_email"
+                    android:imeOptions="flagNoExtractUi"
+                    android:singleLine="true"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+
+                <requestFocus />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:text="@string/password_login"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pass_login_edt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:hint="@string/password"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="@color/transparent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/remember_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:checked="@{viewModelCallback.checked}"
+                    android:onCheckedChanged="@{(cb, checked) -> activityCallback.onCheckedChanged(cb,checked)}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/remember_me"
+                    android:textSize="@dimen/abc_text_size_medium_material" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:onClick="@{(view) -> activityCallback.validateTextInput()}"
+                android:text="@string/sign_in"
+                android:textSize="@dimen/sp_20" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

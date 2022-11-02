@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fragmentCallback"
+            type="com.dallmeier.evidencer.ui.incidents.IncidentsFragment" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/container_ln"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/primary_color"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/empty_layout"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/incident_list_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/incidents_rcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            <TextView
+                android:id="@+id/no_incident_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/no_nearby_incident_available"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/progress_dialog"
+                layout="@layout/progress_hud"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_line"
+            android:layout_height="match_parent"
+            android:background="?attr/color_highlight" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:padding="@dimen/dimen_2">
+
+            <include
+                android:id="@+id/incident_detail_view"
+                layout="@layout/incident_detail_view"
+                bind:fragmentCallback="@{fragmentCallback}" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_line"
+            android:layout_height="match_parent"
+            android:background="?attr/color_highlight" />
+
+        <FrameLayout
+            android:id="@+id/fr_detail_map_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:paddingLeft="@dimen/dimen_2"
+            android:paddingTop="@dimen/dimen_2">
+
+            <RelativeLayout
+                android:id="@+id/map_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

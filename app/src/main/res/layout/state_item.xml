@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="state"
+            type="com.dallmeier.evidencer.model.incident_response.StateEntity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_2"
+        android:layout_marginBottom="@dimen/dimen_2"
+        android:layout_marginTop="@dimen/dimen_2"
+        android:background="@drawable/tag_bgr"
+        android:padding="@dimen/dimen_5">
+
+        <TextView
+            android:id="@+id/incident_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{state.name}"
+            android:textColor="@drawable/highlight_item_text" />
+    </RelativeLayout>
+</layout>

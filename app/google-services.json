@@ -1,0 +1,255 @@
+{
+  "project_info": {
+    "project_number": "214139493813",
+    "firebase_url": "https://people-counting-14be1.firebaseio.com",
+    "project_id": "people-counting-14be1",
+    "storage_bucket": "people-counting-14be1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214139493813:android:c327d4cc16c61567714dfc",
+        "android_client_info": {
+          "package_name": "com.dallmeier.alarmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214139493813-tj0hn3lah5a218tcabv3t4g6u8frfki9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyFbceuMdVH1N4ZjHGLPHYAW-EDT1myQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214139493813-dklgmk7paejhlkmha7m2j1bl3hodahdk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "214139493813-5jvfmjcfvmui0vqlrjf8dn3jppf1arte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dallmeier.AlarmAppDevUpdate"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214139493813:android:0da3ba3df9b1d474714dfc",
+        "android_client_info": {
+          "package_name": "com.dallmeier.asaevidencer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214139493813-tj0hn3lah5a218tcabv3t4g6u8frfki9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyFbceuMdVH1N4ZjHGLPHYAW-EDT1myQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214139493813-dklgmk7paejhlkmha7m2j1bl3hodahdk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "214139493813-5jvfmjcfvmui0vqlrjf8dn3jppf1arte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dallmeier.AlarmAppDevUpdate"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214139493813:android:0be3c26210bca41a714dfc",
+        "android_client_info": {
+          "package_name": "com.dallmeier.safer.detect.count.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214139493813-2en5gmra9fv31m621orhrgj14oatqco3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "42579a12e662c5f063df1a0f4e23e0b324549a14"
+          }
+        },
+        {
+          "client_id": "214139493813-5mp5ijmslc5jv82p3qcdfvkd29l74g1v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "ff3bee1e6860dd1d14b2dc905aafa0f406cfe101"
+          }
+        },
+        {
+          "client_id": "214139493813-cjqpafr05mjneksrk3q59uep8v5o31al.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "c94aa4da2e7da655acc076ea42dc012085696224"
+          }
+        },
+        {
+          "client_id": "214139493813-e6m7r3qttppu12364kr5au50u6c0p5co.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "7282d0d1301b8ddba3b1082239e675e863cff6bb"
+          }
+        },
+        {
+          "client_id": "214139493813-i1ujm336lfbot5prresasdj05tj63j4h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "f00f9c877fe7abe9676822566705b62e83e758db"
+          }
+        },
+        {
+          "client_id": "214139493813-q1o57h3roekh2acv71mo249guchptfqp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "ed31954ba08f8848061b8c0d219ec6dec331f695"
+          }
+        },
+        {
+          "client_id": "214139493813-s6q0t8jqj2ftjfj0sinjcacgdg1qcj64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "d46af7b6da0b4c6c62f1e09f46ebe5cb209cbdbf"
+          }
+        },
+        {
+          "client_id": "214139493813-u96u9v3d536c88898ilqjqgn3c7rnu50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dallmeier.safer.detect.count.dev",
+            "certificate_hash": "67d7dbe0bb632faefa516e7b8ce3f661768e0f2f"
+          }
+        },
+        {
+          "client_id": "214139493813-tj0hn3lah5a218tcabv3t4g6u8frfki9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyFbceuMdVH1N4ZjHGLPHYAW-EDT1myQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214139493813-dklgmk7paejhlkmha7m2j1bl3hodahdk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "214139493813-5jvfmjcfvmui0vqlrjf8dn3jppf1arte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dallmeier.AlarmAppDevUpdate"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214139493813:android:de2dde06e741c3d5714dfc",
+        "android_client_info": {
+          "package_name": "dallmeier.com.pepoplecounting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214139493813-tj0hn3lah5a218tcabv3t4g6u8frfki9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyFbceuMdVH1N4ZjHGLPHYAW-EDT1myQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214139493813-dklgmk7paejhlkmha7m2j1bl3hodahdk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "214139493813-5jvfmjcfvmui0vqlrjf8dn3jppf1arte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dallmeier.AlarmAppDevUpdate"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214139493813:android:eca15081fb82044c714dfc",
+        "android_client_info": {
+          "package_name": "org.tensorflow.lite.tenso.detection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214139493813-tj0hn3lah5a218tcabv3t4g6u8frfki9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyFbceuMdVH1N4ZjHGLPHYAW-EDT1myQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214139493813-dklgmk7paejhlkmha7m2j1bl3hodahdk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "214139493813-5jvfmjcfvmui0vqlrjf8dn3jppf1arte.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dallmeier.AlarmAppDevUpdate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

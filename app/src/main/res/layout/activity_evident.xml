@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="evident"
+            type="com.dallmeier.evidencer.ui.incidents.evident.EvidentActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.incidents.evident.EvidentActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_gallery"
+            bind:evident="@{evident}" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_line"
+            android:background="@color/grey_ccc"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/images_rcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:spanCount="3" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/detail_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10"
+            android:clickable="true"
+            android:onClick="@{()->evident.onUpload()}"
+            android:src="@drawable/ic_check_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            fab:backgroundTint="@color/fab_normal"
+            fab:elevation="6dp"
+            fab:pressedTranslationZ="@dimen/dimen_10"
+            fab:rippleColor="@color/fab_pressed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="evident"
+            type="com.dallmeier.evidencer.ui.incidents.evident.EvidentActivity" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?android:attr/actionBarItemBackground"
+            android:padding="@dimen/dimen_10"
+            android:src="?attr/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/img_back"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_20"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/img_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="?android:attr/actionBarItemBackground"
+            android:padding="@dimen/dimen_10"
+            android:src="?attr/ic_camera" />
+
+        <ImageButton
+            android:id="@+id/img_video"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/img_camera"
+            android:background="?android:attr/actionBarItemBackground"
+            android:padding="@dimen/dimen_10"
+            android:src="?attr/ic_record_video" />
+    </RelativeLayout>
+</layout>

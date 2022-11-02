@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grey_outline">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:minWidth="@dimen/dimen_400"
+        android:minHeight="@dimen/dimen_100"
+        android:padding="@dimen/dimen_10">
+
+        <LinearLayout
+            android:id="@+id/ln_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/light_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_toRightOf="@+id/tv_light_theme"
+                android:buttonTint="@color/fab_normal" />
+
+            <TextView
+                android:id="@+id/tv_light_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="@string/light_theme" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ln_light"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/dark_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_toRightOf="@+id/tv_light_theme"
+                android:buttonTint="@color/fab_normal" />
+
+            <TextView
+                android:id="@+id/tv_dark_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="@string/dark_theme" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_container"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:background="@drawable/animate_btn"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5"
+            android:text="@string/cancel"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/yes"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:background="@drawable/animate_btn"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5"
+            android:text="@string/save"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</RelativeLayout>

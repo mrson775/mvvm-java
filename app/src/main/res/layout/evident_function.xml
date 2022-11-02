@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="detailIncident"
+            type="com.dallmeier.evidencer.ui.incidents.detail.IncidentDetailActivity" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/incident_detail_activity_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/take_evidence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:background="@drawable/circle_bgr"
+            android:onClick="@{()->detailIncident.intentEvidentCreate()}"
+            android:padding="@dimen/dimen_10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_camera_white" />
+
+        <ImageButton
+            android:id="@+id/record_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:background="@drawable/circle_bgr"
+            android:onClick="@{()->detailIncident.intentRecordAudio()}"
+            android:padding="@dimen/dimen_10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_microphone_white" />
+
+        <ImageButton
+            android:id="@+id/write_text_note"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:background="@drawable/circle_bgr"
+            android:onClick="@{()->detailIncident.intentCreateComment()}"
+            android:padding="@dimen/dimen_10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_message_white" />
+
+    </LinearLayout>
+</layout>

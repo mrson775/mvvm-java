@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mediaAttachment"
+            type="com.dallmeier.evidencer.model.evident.MediaAttachment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/evident_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@{mediaAttachment.typeDrawable()}" />
+
+        <LinearLayout
+            android:id="@+id/ln_evident"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_toRightOf="@+id/evident_type"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_5"
+            android:paddingRight="@dimen/dimen_10">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_15"
+                android:paddingEnd="@dimen/dimen_10"
+                android:paddingBottom="@dimen/dimen_15"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/evident_time_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@+id/img_more"
+                    android:layout_toLeftOf="@+id/img_more"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{mediaAttachment.timeAgo()}"
+                    android:textSize="@dimen/sp_10"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/evident_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/evident_time_person"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/img_more"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{mediaAttachment.timelineString()}"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_more_white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_line"
+            android:layout_below="@+id/ln_evident"
+            android:background="?attr/color_highlight" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="incidentActivity"
+            type="com.dallmeier.evidencer.ui.incidents.create.IncidentCreateActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.incidents.create.IncidentCreateActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_line"
+            android:background="@color/grey_ccc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_100"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_100"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dimen_50">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_layout_corners_radius_5"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/assignee"
+                        android:textSize="@dimen/sp_16" />
+
+                    <Spinner
+                        android:id="@+id/assignee_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_bgr"
+                        android:dropDownVerticalOffset="@dimen/dimen_50"
+                        android:padding="@dimen/dimen_10"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/type_of_incident"
+                        android:textSize="@dimen/sp_16" />
+
+                    <Spinner
+                        android:id="@+id/type_of_incident_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_bgr"
+                        android:dropDownVerticalOffset="@dimen/dimen_50"
+                        android:padding="@dimen/dimen_10"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/date_time"
+                        android:textSize="@dimen/sp_16" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/date_time_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edt_radius_5"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:drawableRight="?attr/ic_pen"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/date_time"
+                        android:inputType="text"
+                        android:onClick="@{()->incidentActivity.showCalendar()}"
+                        android:padding="@dimen/dimen_10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/border_layout_corners_radius_5"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/location"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_50"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/address"
+                        android:textSize="@dimen/sp_16" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_50"
+                        android:layout_marginRight="@dimen/dimen_100"
+                        android:background="@drawable/border_edt_radius_5"
+                        android:cursorVisible="false"
+                        android:drawableRight="?attr/ic_pen"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/current_location"
+                        android:inputType="text"
+                        android:onClick="@{()->incidentActivity.intentSearchView()}"
+                        android:padding="@dimen/dimen_10"
+                        android:drawablePadding="@dimen/dimen_10"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_50"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/latitude"
+                        android:textSize="@dimen/sp_16" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/latitude_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_50"
+                        android:layout_marginRight="@dimen/dimen_100"
+                        android:background="@drawable/border_edt_radius_5"
+                        android:cursorVisible="false"
+                        android:drawableRight="?attr/ic_pen"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/latitude"
+                        android:inputType="text"
+                        android:onClick="@{()->incidentActivity.intentSearchView()}"
+                        android:padding="@dimen/dimen_10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_50"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:text="@string/longitude"
+                        android:textSize="@dimen/sp_16" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/longitude_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_50"
+                        android:layout_marginRight="@dimen/dimen_100"
+                        android:background="@drawable/border_edt_radius_5"
+                        android:cursorVisible="false"
+                        android:drawableRight="?attr/ic_pen"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/longitude"
+                        android:inputType="text"
+                        android:onClick="@{()->incidentActivity.intentSearchView()}"
+                        android:padding="@dimen/dimen_10" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="@string/critical"
+                    android:textSize="@dimen/sp_16" />
+
+                <SeekBar
+                    android:id="@+id/critical_sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:max="100"
+                    android:progress="50" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/animate_btn"
+                        android:onClick="@{()->incidentActivity.onBack()}"
+                        android:text="@string/cancel" />
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_weight="1"
+                        android:background="@drawable/animate_btn"
+                        android:onClick="@{()->incidentActivity.inputIncidentDto()}"
+                        android:text="@string/add" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

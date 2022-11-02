@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="comment"
+            type="com.dallmeier.evidencer.model.Comment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/evident_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="?attr/ic_comment" />
+
+        <LinearLayout
+            android:id="@+id/ln_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/evident_type"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_15"
+                android:paddingEnd="@dimen/dimen_10"
+                android:paddingBottom="@dimen/dimen_15"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/comment_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@+id/img_more"
+                    android:layout_toLeftOf="@+id/img_more"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{comment.getUserPost()}"
+                    android:textSize="@dimen/sp_10"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/evident_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comment_person"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@+id/incident_create"
+                    android:layout_toLeftOf="@+id/img_more"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{comment.content}"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:id="@+id/img_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_more_white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_line"
+            android:layout_below="@+id/ln_comment"
+            android:background="@color/grey_ccc" />
+    </RelativeLayout>
+</layout>

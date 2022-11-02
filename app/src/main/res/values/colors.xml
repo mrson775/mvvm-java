@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color_dark">#46484D</color>
+    <color name="primary_color_light">#EDEDED</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fab_normal">#1CBBFF</color>
+    <color name="fab_pressed">#257CBF</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="blue_Border">#2f6699</color>
+    <color name="dark_gray">#3F3F3F</color>
+    <color name="line_vulcan">#37393D</color>
+    <color name="slider_select">#1CBBFF</color>
+    <color name="grey_ccc">#37000000</color>
+    <color name="transparent_20">#33000000</color>
+    <color name="transparent_50">#80000000</color>
+    <attr name="color_vulcan" format="reference" />
+    <attr name="color_highlight" format="reference" />
+    <attr name="primary_color" format="reference" />
+    <attr name="primary_icon_color" format="reference" />
+    <attr name="text_color" format="reference" />
+</resources>
